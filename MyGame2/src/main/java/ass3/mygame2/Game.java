@@ -193,8 +193,8 @@ public class Game {
 
     private void dropItem(Command command) {
         if (!command.hasSecondWord()) {
-            // if there is no second word, we don't know where to go...
-            System.out.println("Take what?");
+            // if there is no second word, we don't know what to drop...
+            System.out.println("Drop what?");
             return;
         }
 
@@ -203,11 +203,12 @@ public class Game {
         //getPlayerItem(itemFromCommand);
 
         if (currentItem == null) {
-            System.out.println("You can't take nothing, no?");
+            System.out.println("That item is not in your inventory?");
         } else {
             // Do the transaction here
             player.removeItemInventory(currentItem);
             currentRoom.addItemInRoom(currentItem);
+            System.out.print("Dropped" + currentItem);
 
             //removeItemInventory(currentItem);
             //roomItem.put(currentItem, currentRoom);
@@ -218,8 +219,8 @@ public class Game {
     private void useItem(Command command) // use key
     {
         if (!command.hasSecondWord()) {
-            // if there is no second word, we don't know where to go...
-            System.out.println("Take what?");
+            // if there is no second word, we don't know what to use...
+            System.out.println("Use what?");
             return;
         }
 
@@ -232,18 +233,19 @@ public class Game {
             // you want make sure that the currentRoom is the room where you want to open the door (before the nextdoor).
             // you want to make sure the currentItem matches the key to open the next door.
 
-            //if(currentRoom.getName().equals("castle") && currentItem.getName().equals("key")){
-            //.setLockedStatus(false);
+            if(currentRoom.getName().equals("castle") && currentItem.getName().equals("key")){
+            currentRoom.setLockedStatus(false);
             System.out.println("You just used the " + currentItem.getName());
 
-            //if(currentRoom.getName().equals("frontYard") && currentItem.getName().equals("item1")){
-            //frontGate.setLockedStatus(false);
+            if(currentRoom.getName().equals("frontGate") && currentItem.getName().equals("item1")){
+              currentRoom.setLockedStatus(false);
+            }
             // if(currentRoom.getName().equals("castle")){
             // //currentRoom.checkRoom("castle");
             // roomKey.get(currentItem).setLockedStatus(false);
-            // }
+             }
             System.out.println("You cannot use this item here");
-
+            
         }
 
     }

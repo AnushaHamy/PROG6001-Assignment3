@@ -15,7 +15,7 @@ public class ItemCreation
     private ArrayList<Item> allItemsInGame;
     
     /**
-     * This will crete items
+     * This will create items
      */
     public ItemCreation()
     {       

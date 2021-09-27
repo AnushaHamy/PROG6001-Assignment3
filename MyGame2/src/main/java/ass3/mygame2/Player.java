@@ -31,7 +31,7 @@ public class Player
     public void addItemInventory(Item item){
         playerItem.add(item);
         System.out.println(item.getDescription() + " was taken ");
-        //System.out.println(item.getDescription() + " was removed from the room"); // add extra information to inform user that the item has been taken
+        System.out.println(item.getDescription() + " was removed from the room"); // add extra information to inform user that the item has been taken
     }
     
     /**
@@ -61,7 +61,7 @@ public class Player
     
    /**
     * Print ll inventory
-    * @return return all items in inventory
+    * @return return all items in
     */
     public String printAllInventory(){
 
