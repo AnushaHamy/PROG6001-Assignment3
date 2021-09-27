@@ -10,9 +10,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
+ *This is Game class
  *
- *
- 
  */
 
 public class Game {
@@ -41,6 +40,9 @@ public class Game {
         //System.out.println(createRoom.getcurrentRoom().getName());
     }
     
+    /**
+     * @return return current room
+     */
     public Room getCurrentRoom() {
         return currentRoom;
     }

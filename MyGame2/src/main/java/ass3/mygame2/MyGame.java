@@ -3,17 +3,18 @@ package ass3.mygame2;
 
 
 /**
- *
- * @author @version
+ *This is MyGame class
+ * @author Anusha hamy
+ * @version 1.0
  */
 
 
 public class MyGame {
 
     /**
-    *
-    * @param nothing
-    */
+     * This is main method
+     * @param args this will get the keyboard inputs
+     */
     public static void main(String[] args) {
         Game game = new Game();
         game.play(); 

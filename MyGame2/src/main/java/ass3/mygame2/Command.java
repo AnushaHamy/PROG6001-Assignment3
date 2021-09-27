@@ -19,6 +19,10 @@
 
 package ass3.mygame2;
 
+/**
+ * This is command class
+ * @author ANUSHA
+ */
 public class Command
 {
     private String commandWord;

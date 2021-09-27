@@ -5,8 +5,9 @@ import java.util.HashMap;
 import java.util.ArrayList;
 
 /**
- * Write at least 3 sentences!!!!!
- * 
+ * This is room class
+ * This will specify the directions
+ * This will add and remove items to room
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
  */
@@ -25,6 +26,8 @@ public class Room
      * no exits. "description" is something like "a kitchen" or
      * "an open court yard".
      * @param description The room's description.
+     * @param isLocked get the locked status
+     * @param  name get the name
      */
     public Room(String name, String description, boolean isLocked) 
     {
@@ -65,12 +68,20 @@ public class Room
         return "You are " + description + ".\n" + getExitString() + ".\n" + getAllItems();
     }
 
+    /**
+     * Get all the items
+     * @return return the list of items that user have
+     */
     public String getAllItems(){
 
         return "You have some " + listOfItems();
 
     }
-
+    
+    /**
+     * Get the items in room
+     * @return return the item list
+     */
     private String listOfItems(){
 
         String returnString = "items:";
@@ -121,17 +132,30 @@ public class Room
         }
         return itemToReturn;
     }
-
+    
+    /**
+     * Add items to room
+     * @param item get item that needs to add into room
+     */
     public void addItemInRoom(Item item){
         roomItem.add(item);
     }
-
+    
+    /**
+     * Remove items in the room
+     * @param item get the item that needs to remove in the room
+     */
     public void removeItemInRoom(Item item){
         if(roomItem.size() > 0){
             roomItem.remove(item);
         }
     }
-
+    
+    /**
+     * Add into Hash map 
+     * @param room location of the room
+     * @param item location of the item
+     */
     public void addHashMapItemInRoom(Room room, Item item){
         roomHashMapItem.put(room, item);
     }
@@ -145,11 +169,19 @@ public class Room
     public boolean getLockedStatus(){
         return isLocked;
     }
-
+    
+    /**
+     * This will give locked status
+     * @param newStatus get the locked status
+     */
     public void setLockedStatus(boolean newStatus){
         isLocked = newStatus;
     }
     
+    /**
+     * Get the Name
+     * @return return the name
+     */
     public String getName(){
         return name;
     }

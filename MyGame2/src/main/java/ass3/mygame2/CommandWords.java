@@ -10,6 +10,10 @@
  */
 package ass3.mygame2;
 
+/**
+ * This is CommandWords class
+ * @author ANUSHA
+ */
 public class CommandWords
 {
     // a constant array that holds all valid command words
@@ -25,10 +29,11 @@ public class CommandWords
         // nothing to do at the moment...
     }
 
-    /**
-     * Check whether a given String is a valid command word. 
-     * @return true if it is, false if it isn't.
-     */
+   /**
+    * Check whether a given String is a valid command word. 
+    * @param  aString assign the user input string
+    * @return true if it is, false if it isn't.
+    */
     public boolean isCommand(String aString)
     {
         for(int i = 0; i < validCommands.length; i++) {

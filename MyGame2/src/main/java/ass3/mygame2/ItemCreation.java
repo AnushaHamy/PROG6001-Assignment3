@@ -4,22 +4,28 @@ import java.util.ArrayList;
 
 
 /**
- * Write a description of class ItemCreation here.
+ * This is ItemCreation class.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Anusha Hamy
+ * @version 1.0
  */
 public class ItemCreation
 {
     
     private ArrayList<Item> allItemsInGame;
     
+    /**
+     * This will crete items
+     */
     public ItemCreation()
     {       
         allItemsInGame = new ArrayList();
         createItems();
     }
     
+    /**
+     * create items
+     */
     public void createItems(){
         
         Item item1, item2, excaliburSword, key, frontGateKey;
@@ -33,7 +39,11 @@ public class ItemCreation
         allItemsInGame.add(key);
         allItemsInGame.add(frontGateKey);
     }
-   
+   /**
+    * Get the item
+    * @param stringItem get the item 
+    * @return return the item
+    */
     public Item getItem(String stringItem){
         Item itemToReturn = null;
         for(Item item: allItemsInGame){
