@@ -169,14 +169,14 @@ public class Game {
 
     private void takeItem(Command command) {
         if (!command.hasSecondWord()) {
-            // if there is no second word, we don't know where to go...
+            // if there is no second word, we don't know what to take...
             System.out.println("Take what?");
             return;
         }
 
         String itemFromCommand = command.getSecondWord();
         Item currentItem = currentRoom.getRoomItem(itemFromCommand);
-        //getPlayerItem(itemFromCommand);
+        player.getPlayerItem(itemFromCommand);
 
         if (currentItem == null) {
             System.out.println("You can't take nothing, no?");
@@ -187,7 +187,7 @@ public class Game {
 
             //roomItem.remove(currentItem);
             //addItemInventory(currentItem);
-            //System.out.println(currentRoom.getLongDescription());
+            System.out.println(currentRoom.getLongDescription());
         }
     }
 
