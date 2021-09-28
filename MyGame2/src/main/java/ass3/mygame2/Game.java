@@ -162,7 +162,8 @@ public class Game {
                 currentRoom = nextRoom;
                 System.out.println(currentRoom.getLongDescription());
                 //System.out.println(currentRoom.printAllRoomItems());
-                // increment the timeCounter
+                 //increment the timeCounter
+                 timeCounter++;
             }
         }
     }
@@ -185,8 +186,8 @@ public class Game {
             currentRoom.removeItemInRoom(currentItem);
             player.addItemInventory(currentItem);
 
-            roomItem.remove(currentItem);
-            player.addItemInventory(currentItem);
+           // roomItem.remove(currentItem);
+           // player.addItemInventory(currentItem);
             System.out.println(currentRoom.getLongDescription());
         }
     }
