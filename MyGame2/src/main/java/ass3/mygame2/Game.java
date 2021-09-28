@@ -71,9 +71,9 @@ public class Game {
      */
     private void printWelcome() {
         System.out.println();
-        System.out.println("some background here");
-        System.out.println("objective here");
-        System.out.println("include some necessary information (e.g. time limit)"+timeCounter);
+        System.out.println("This is Zuul Game");
+        System.out.println("You need to make the selections accordingly");
+        System.out.println("Time starts now:"+timeCounter);
         System.out.println();
         System.out.println(currentRoom.getLongDescription());
     }
