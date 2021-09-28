@@ -185,8 +185,8 @@ public class Game {
             currentRoom.removeItemInRoom(currentItem);
             player.addItemInventory(currentItem);
 
-            //roomItem.remove(currentItem);
-            //addItemInventory(currentItem);
+            roomItem.remove(currentItem);
+            player.addItemInventory(currentItem);
             System.out.println(currentRoom.getLongDescription());
         }
     }
