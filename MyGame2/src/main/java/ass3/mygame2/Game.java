@@ -164,7 +164,7 @@ public class Game {
                 //System.out.println(currentRoom.printAllRoomItems());
                  //increment the timeCounter
                  timeCounter++;
-                 System.out.println("Timer:"+timeCounter);
+                 System.out.println("Step count:"+timeCounter);
             }
         }
     }
