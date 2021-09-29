@@ -41,6 +41,7 @@ public class Game {
     }
     
     /**
+     * Get the current room
      * @return return current room
      */
     public Room getCurrentRoom() {
@@ -132,6 +133,9 @@ public class Game {
         parser.showCommands();
     }
 
+    /**
+     * Print all the items in inventory
+     */
     private void printInventory() {
         System.out.println(player.printAllInventory());
     }
@@ -169,6 +173,10 @@ public class Game {
         }
     }
 
+    /**
+     * assess the items that user take or not
+     * @param command get the item that user has entered
+     */
     private void takeItem(Command command) {
         if (!command.hasSecondWord()) {
             // if there is no second word, we don't know what to take...
@@ -193,6 +201,10 @@ public class Game {
         }
     }
 
+    /**
+     * Remove the item that user want
+     * @param command get the item name that user want to remove
+     */
     private void dropItem(Command command) {
         if (!command.hasSecondWord()) {
             // if there is no second word, we don't know what to drop...
@@ -218,6 +230,10 @@ public class Game {
         }
     }
 
+    /**
+     * If your want to an item to proceed with the game
+     * @param command get the item name that user wants to use
+     */
     private void useItem(Command command) // use key
     {
         if (!command.hasSecondWord()) {
